@@ -11,7 +11,6 @@
         <h1>Bienvenidos a Deporte360</h1>
         <p>Tu portal de noticias, análisis y entretenimiento deportivo</p>
     </header>
-    
     <nav>
         <a href="#noticias">Noticias</a>
         <a href="#videos">Videos</a>
@@ -19,113 +18,87 @@
         <a href="#tienda">Tienda</a>
         <a href="#contacto">Contacto</a>
     </nav>
-    
     <section class="hero">
-        <h1>Cubriendo lo Mejor del Deporte Mundial</h1>
-    </section>
-
-    <!-- Barra de búsqueda de noticias -->
-    <section id="search">
-        <h2>Buscar Noticias</h2>
-        <input type="text" id="search-bar" placeholder="Buscar noticias...">
-        <button onclick="searchNews()">Buscar</button>
-    </section>
-
-    <!-- Lo Más Visto -->
-    <section id="lo-mas-visto">
-        <h2>Lo Más Visto</h2>
-        <div class="card">
-            <h3>Video: Golazo en el último minuto</h3>
-            <p>Disfruta de este increíble gol de último minuto.</p>
-        </div>
-        <div class="card">
-            <h3>Noticia: El regreso de Messi</h3>
-            <p>Todo lo que necesitas saber sobre el regreso de Messi al fútbol.</p>
+        <div class="texto-central">
+            <h1>Cubriendo lo Mejor del Deporte Mundial</h1>
         </div>
     </section>
+    <div class="content">
+        <!-- Noticias -->
+        <section id="noticias">
+            <h2>Últimas Noticias</h2>
+            <article>
+                <h3>Fútbol Internacional</h3>
+                <p>Descubre todo sobre los partidos más recientes.</p>
+            </article>
+            <article>
+                <h3>NBA: Temporada en Curso</h3>
+                <p>Resultados, análisis y más.</p>
+            </article>
+        </section>
+        
+        <!-- Videos -->
+        <section id="videos">
+            <h2>Videos Destacados</h2>
+            <video controls width="100%">
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta reproducción de video.
+            </video>
+        </section>
+        
+        <!-- Encuesta -->
+        <section id="poll">
+            <h2>¿Quién ganará la Champions League?</h2>
+            <form id="pollForm">
+                <label><input type="radio" name="team" value="Real Madrid"> Real Madrid</label><br>
+                <label><input type="radio" name="team" value="Barcelona"> Barcelona</label><br>
+                <label><input type="radio" name="team" value="Manchester City"> Manchester City</label><br>
+                <button type="button" onclick="submitPoll()">Votar</button>
+            </form>
+            <p id="pollResult" style="display:none; margin-top:10px;"></p>
+        </section>
 
-    <!-- Carrusel de imágenes -->
-    <section id="carousel">
-        <h2>Lo Mejor del Deporte</h2>
-        <div class="carousel-container">
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x200" alt="Deporte 1">
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x200" alt="Deporte 2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x200" alt="Deporte 3">
-            </div>
-        </div>
-    </section>
+        <!-- Próximos Partidos -->
+        <section id="calendar">
+            <h2>Próximos Partidos</h2>
+            <ul>
+                <li>10/12/2024 - Real Madrid vs Barcelona</li>
+                <li>12/12/2024 - PSG vs Manchester City</li>
+                <li>15/12/2024 - Juventus vs Inter</li>
+            </ul>
+        </section>
 
-    <!-- Testimonios -->
-    <section id="testimonials">
-        <h2>Testimonios</h2>
-        <div class="testimonial">
-            <p>"Deporte360 me mantiene informado sobre todo lo que pasa en el mundo deportivo. ¡Una página increíble!"</p>
-            <p>- Juan Pérez</p>
-        </div>
-        <div class="testimonial">
-            <p>"Me encanta cómo cubren todos los deportes. No puedo dejar de visitar este sitio todos los días."</p>
-            <p>- Laura García</p>
-        </div>
-    </section>
+        <!-- Explora Estadios -->
+        <section id="map">
+            <h2>Explora Estadios</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12584.158450225896!2d-3.70379020779588!3d40.41677517441147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289ec8b3ea71%3A0xe65b819fbfbd1ec7!2sEstadio%20Santiago%20Bernab%C3%A9u!5e0!3m2!1ses!2ses!4v1670956927685!5m2!1ses!2ses" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
 
-    <!-- Noticias -->
-    <section id="noticias">
-        <h2>Últimas Noticias</h2>
-        <div class="card">
-            <h3>Fútbol: Resultados de la Jornada</h3>
-            <p>Descubre los resultados y análisis de los partidos más emocionantes.</p>
-        </div>
-        <div class="card">
-            <h3>Baloncesto: ¿Quién dominará los Playoffs?</h3>
-            <p>Revisa el rendimiento de los equipos y los pronósticos de expertos.</p>
-        </div>
-    </section>
+        <!-- Contador de Visitas -->
+        <section id="counter">
+            <h2>Contador de Visitas</h2>
+            <p>Esta página ha sido visitada <span id="visitCount">0</span> veces.</p>
+        </section>
 
-    <!-- Barra lateral con noticias destacadas -->
-    <div class="sidebar">
-        <h3>Noticias Destacadas</h3>
-        <ul>
-            <li><a href="#">Fútbol: La Temporada 2024</a></li>
-            <li><a href="#">NBA: Cambios en los equipos</a></li>
-            <li><a href="#">Nuevas Tecnologías en Equipos Deportivos</a></li>
-        </ul>
+        <!-- Chat en Vivo -->
+        <section id="liveChat">
+            <h2>Chat en Vivo</h2>
+            <div id="chatWindow" style="border: 1px solid #ccc; height: 200px; overflow-y: scroll; padding: 10px;"></div>
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje aquí..." />
+            <button onclick="sendMessage()">Enviar</button>
+        </section>
     </div>
-
     <footer>
         <p>&copy; 2024 Deporte360. Todos los derechos reservados.</p>
-        <p>Síguenos en redes sociales: 
-            <a href="#" style="color: #ffd700;">Facebook</a> | 
-            <a href="#" style="color: #ffd700;">Instagram</a> | 
-            <a href="#" style="color: #ffd700;">YouTube</a>
-        </p>
     </footer>
-
-    <!-- Botón de Scroll al Inicio -->
-    <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-        ↑
-    </button>
-
-    <script>
-        function searchNews() {
-            let query = document.getElementById("search-bar").value.toLowerCase();
-            alert("Buscando: " + query);
-            // Puedes agregar la lógica aquí para filtrar las noticias o videos.
-        }
-
-        // Mostrar el botón de scroll al inicio al hacer scroll
-        window.onscroll = function() {
-            let button = document.querySelector(".scroll-to-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                button.style.display = "block";
-            } else {
-                button.style.display = "none";
-            }
-        };
-    </script>
+    <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
