@@ -4,165 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deporte360 - Todo el Deporte en un Solo Lugar</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        /* Estilo del encabezado */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        /* Estilo de los artículos */
-        article {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Estilo de los botones */
-        button {
-            padding: 10px 15px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #2980b9;
-        }
-
-        .texto-central {
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
-            color: white; /* Color del texto */
-            padding: 20px; /* Espaciado interno */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: center; /* Centrar el texto */
-            display: block; /* El fondo ocupará todo el ancho disponible */
-            width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
-        }
-
-        /* Estilo de la barra de navegación */
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #003d7e;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
-        nav a:hover {
-            background: #004c9a;
-            transition: background-color 0.3s;
-        }
-
-        /* Estilo para la sección hero */
-        .hero {
-            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-            background-size: cover;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-        }
-
-        /* Estilo de contenido */
-        .content {
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .content h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 15px;
-            text-align: center;
-            width: 48%; /* Ajusta el ancho de las tarjetas */
-        }
-
-        .sidebar {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 25%; /* Ajusta el ancho de la barra lateral */
-        }
-
-        footer {
-            background: #003d7e;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* Mejoras para responsividad */
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-            }
-            .card, .sidebar {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
-
-        /* Botón de Scroll al Inicio */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #003d7e;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none; /* Inicialmente oculto */
-        }
-
-        .scroll-to-top:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Encabezado -->
     <header>
         <h1>Bienvenidos a Deporte360</h1>
         <p>Tu portal de noticias, análisis y entretenimiento deportivo</p>
     </header>
-
-    <!-- Barra de navegación -->
+    
     <nav>
         <a href="#noticias">Noticias</a>
         <a href="#videos">Videos</a>
@@ -170,42 +19,83 @@
         <a href="#tienda">Tienda</a>
         <a href="#contacto">Contacto</a>
     </nav>
-
-    <!-- Sección hero -->
+    
     <section class="hero">
         <h1>Cubriendo lo Mejor del Deporte Mundial</h1>
     </section>
 
-    <!-- Contenido principal -->
-    <div class="content">
-        <!-- Sección de noticias -->
-        <div class="news-section">
-            <h2>Últimas Noticias</h2>
-            <div class="card">
-                <h3>Fútbol: Resultados de la Jornada</h3>
-                <p>Descubre los resultados y análisis de los partidos más emocionantes.</p>
-            </div>
-            <div class="card">
-                <h3>Baloncesto: ¿Quién dominará los Playoffs?</h3>
-                <p>Revisa el rendimiento de los equipos y los pronósticos de expertos.</p>
-            </div>
-        </div>
+    <!-- Barra de búsqueda de noticias -->
+    <section id="search">
+        <h2>Buscar Noticias</h2>
+        <input type="text" id="search-bar" placeholder="Buscar noticias...">
+        <button onclick="searchNews()">Buscar</button>
+    </section>
 
-        <!-- Barra lateral con noticias destacadas -->
-        <div class="sidebar">
-            <h3>Noticias Destacadas</h3>
-            <ul>
-                <li><a href="#">Fútbol: La Temporada 2024</a></li>
-                <li><a href="#">NBA: Cambios en los equipos</a></li>
-                <li><a href="#">Nuevas Tecnologías en Equipos Deportivos</a></li>
-            </ul>
+    <!-- Lo Más Visto -->
+    <section id="lo-mas-visto">
+        <h2>Lo Más Visto</h2>
+        <div class="card">
+            <h3>Video: Golazo en el último minuto</h3>
+            <p>Disfruta de este increíble gol de último minuto.</p>
         </div>
+        <div class="card">
+            <h3>Noticia: El regreso de Messi</h3>
+            <p>Todo lo que necesitas saber sobre el regreso de Messi al fútbol.</p>
+        </div>
+    </section>
+
+    <!-- Carrusel de imágenes -->
+    <section id="carousel">
+        <h2>Lo Mejor del Deporte</h2>
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x200" alt="Deporte 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x200" alt="Deporte 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x200" alt="Deporte 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonials">
+        <h2>Testimonios</h2>
+        <div class="testimonial">
+            <p>"Deporte360 me mantiene informado sobre todo lo que pasa en el mundo deportivo. ¡Una página increíble!"</p>
+            <p>- Juan Pérez</p>
+        </div>
+        <div class="testimonial">
+            <p>"Me encanta cómo cubren todos los deportes. No puedo dejar de visitar este sitio todos los días."</p>
+            <p>- Laura García</p>
+        </div>
+    </section>
+
+    <!-- Noticias -->
+    <section id="noticias">
+        <h2>Últimas Noticias</h2>
+        <div class="card">
+            <h3>Fútbol: Resultados de la Jornada</h3>
+            <p>Descubre los resultados y análisis de los partidos más emocionantes.</p>
+        </div>
+        <div class="card">
+            <h3>Baloncesto: ¿Quién dominará los Playoffs?</h3>
+            <p>Revisa el rendimiento de los equipos y los pronósticos de expertos.</p>
+        </div>
+    </section>
+
+    <!-- Barra lateral con noticias destacadas -->
+    <div class="sidebar">
+        <h3>Noticias Destacadas</h3>
+        <ul>
+            <li><a href="#">Fútbol: La Temporada 2024</a></li>
+            <li><a href="#">NBA: Cambios en los equipos</a></li>
+            <li><a href="#">Nuevas Tecnologías en Equipos Deportivos</a></li>
+        </ul>
     </div>
 
-    <!-- Botón para cambiar el color de fondo -->
-    <button id="changeColorButton">Cambiar color de fondo</button>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Deporte360. Todos los derechos reservados.</p>
         <p>Síguenos en redes sociales: 
@@ -220,23 +110,22 @@
         ↑
     </button>
 
-    <!-- Scripts -->
     <script>
-        // Cambiar el color de fondo al hacer clic en el botón
-        document.getElementById("changeColorButton").onclick = function() {
-            document.body.style.backgroundColor = "#f39c12";  // Cambiar color de fondo
-        };
+        function searchNews() {
+            let query = document.getElementById("search-bar").value.toLowerCase();
+            alert("Buscando: " + query);
+            // Puedes agregar la lógica aquí para filtrar las noticias o videos.
+        }
 
-        // Mostrar el botón cuando el usuario se desplace hacia abajo
+        // Mostrar el botón de scroll al inicio al hacer scroll
         window.onscroll = function() {
-            var scrollButton = document.querySelector('.scroll-to-top');
+            let button = document.querySelector(".scroll-to-top");
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollButton.style.display = "block";
+                button.style.display = "block";
             } else {
-                scrollButton.style.display = "none";
+                button.style.display = "none";
             }
         };
     </script>
-
 </body>
 </html>
