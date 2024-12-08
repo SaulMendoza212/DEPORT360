@@ -90,23 +90,6 @@
             }
         }
 
-        /* Botón de Scroll al Inicio */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #003d7e;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none; /* Inicialmente oculto */
-        }
-        .scroll-to-top:hover {
-            background-color: #0056b3;
-        }
-
     </style>
 </head>
 <body>
@@ -157,22 +140,5 @@
             <a href="#" style="color: #ffd700;">YouTube</a>
         </p>
     </footer>
-
-    <!-- Botón de Scroll al Inicio -->
-    <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-        ↑
-    </button>
-
-    <script>
-        // Mostrar el botón cuando el usuario se desplace hacia abajo
-        window.onscroll = function() {
-            let button = document.querySelector('.scroll-to-top');
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                button.style.display = 'block';  // Muestra el botón cuando se desplace más de 200px
-            } else {
-                button.style.display = 'none';  // Oculta el botón si está en la parte superior
-            }
-        };
-    </script>
 </body>
 </html>
