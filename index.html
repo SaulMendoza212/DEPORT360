@@ -140,4 +140,39 @@
 
         <!-- Barra lateral con noticias destacadas -->
         <div class="sidebar">
-            <h3>Noticias Destacadas</h
+            <h3>Noticias Destacadas</h3>
+            <ul>
+                <li><a href="#">Fútbol: La Temporada 2024</a></li>
+                <li><a href="#">NBA: Cambios en los equipos</a></li>
+                <li><a href="#">Nuevas Tecnologías en Equipos Deportivos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Deporte360. Todos los derechos reservados.</p>
+        <p>Síguenos en redes sociales: 
+            <a href="#" style="color: #ffd700;">Facebook</a> | 
+            <a href="#" style="color: #ffd700;">Instagram</a> | 
+            <a href="#" style="color: #ffd700;">YouTube</a>
+        </p>
+    </footer>
+
+    <!-- Botón de Scroll al Inicio -->
+    <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        ↑
+    </button>
+
+    <script>
+        // Mostrar el botón cuando el usuario se desplace hacia abajo
+        window.onscroll = function() {
+            let button = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = 'block';  // Muestra el botón cuando se desplace más de 200px
+            } else {
+                button.style.display = 'none';  // Oculta el botón si está en la parte superior
+            }
+        };
+    </script>
+</body>
+</html>
