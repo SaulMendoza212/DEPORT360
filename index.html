@@ -164,4 +164,15 @@
     </button>
 
     <script>
-        // Mostrar el botón cuando el usuario s
+        // Mostrar el botón cuando el usuario se desplace hacia abajo
+        window.onscroll = function() {
+            let button = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = 'block';  // Muestra el botón cuando se desplace más de 200px
+            } else {
+                button.style.display = 'none';  // Oculta el botón si está en la parte superior
+            }
+        };
+    </script>
+</body>
+</html>
