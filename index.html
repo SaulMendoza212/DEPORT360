@@ -30,6 +30,7 @@
         }
         nav a:hover {
             background: #004c9a;
+            transition: background-color 0.3s;
         }
         .hero {
             background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
@@ -40,7 +41,7 @@
             align-items: center;
             color: #fff;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añadí sombra al texto */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .hero h1 {
             font-size: 3rem;
@@ -61,20 +62,34 @@
             margin: 10px;
             padding: 15px;
             text-align: center;
-            width: 48%; /* Ajusta el ancho de las tarjetas */
+            width: 48%;
         }
         .sidebar {
             background-color: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            width: 25%; /* Ajusta el ancho de la barra lateral */
+            width: 25%;
         }
         footer {
             background: #003d7e;
             color: #fff;
             text-align: center;
             padding: 10px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .sidebar {
+                width: 100%;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -91,7 +106,7 @@
         <a href="#contacto">Contacto</a>
     </nav>
     <section class="hero">
-        <h1 class="texto-central">Cubriendo lo Mejor del Deporte Mundial</h1>
+        <h1>Cubriendo lo Mejor del Deporte Mundial</h1>
     </section>
     <div class="content">
         <!-- Sección de noticias -->
@@ -117,10 +132,47 @@
             </ul>
         </div>
     </div>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros" style="padding: 40px; background-color: #f9f9f9;">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un equipo apasionado por el deporte y la información deportiva. Nuestro objetivo es brindarte las últimas noticias, análisis y contenido multimedia sobre tus deportes favoritos.</p>
+    </section>
+
+    <!-- Sección de Videos -->
+    <section id="videos" style="padding: 40px;">
+        <h2>Galería de Videos</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div class="video" style="flex: 1 1 30%;">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/TU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video" style="flex: 1 1 30%;">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/TU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" style="padding: 40px; background-color: #f9f9f9;">
+        <h2>Contacto</h2>
+        <form action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2024 Deporte360. Todos los derechos reservados.</p>
-        <p>Síguenos en redes sociales: <a href="#" style="color: #ffd700;">Facebook</a> | <a href="#" style="color: #ffd700;">Instagram</a> | <a href="#" style="color: #ffd700;">YouTube</a></p>
+        <p>Síguenos en redes sociales: 
+            <a href="https://www.facebook.com" style="color: #ffd700;">Facebook</a> | 
+            <a href="https://www.instagram.com" style="color: #ffd700;">Instagram</a> | 
+            <a href="https://www.youtube.com" style="color: #ffd700;">YouTube</a>
+        </p>
     </footer>
 </body>
 </html>
-
