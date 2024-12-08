@@ -46,6 +46,8 @@
         }
         .content {
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
         }
         .content h2 {
             text-align: center;
@@ -58,6 +60,14 @@
             margin: 10px;
             padding: 15px;
             text-align: center;
+            width: 48%; /* Ajusta el ancho de las tarjetas */
+        }
+        .sidebar {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 25%; /* Ajusta el ancho de la barra lateral */
         }
         footer {
             background: #003d7e;
@@ -83,14 +93,27 @@
         <h1 class="texto-central">Cubriendo lo Mejor del Deporte Mundial</h1>
     </section>
     <div class="content">
-        <h2>Últimas Noticias</h2>
-        <div class="card">
-            <h3>Fútbol: Resultados de la Jornada</h3>
-            <p>Descubre los resultados y análisis de los partidos más emocionantes.</p>
+        <!-- Sección de noticias -->
+        <div class="news-section">
+            <h2>Últimas Noticias</h2>
+            <div class="card">
+                <h3>Fútbol: Resultados de la Jornada</h3>
+                <p>Descubre los resultados y análisis de los partidos más emocionantes.</p>
+            </div>
+            <div class="card">
+                <h3>Baloncesto: ¿Quién dominará los Playoffs?</h3>
+                <p>Revisa el rendimiento de los equipos y los pronósticos de expertos.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Baloncesto: ¿Quién dominará los Playoffs?</h3>
-            <p>Revisa el rendimiento de los equipos y los pronósticos de expertos.</p>
+
+        <!-- Barra lateral con noticias destacadas -->
+        <div class="sidebar">
+            <h3>Noticias Destacadas</h3>
+            <ul>
+                <li><a href="#">Fútbol: La Temporada 2024</a></li>
+                <li><a href="#">NBA: Cambios en los equipos</a></li>
+                <li><a href="#">Nuevas Tecnologías en Equipos Deportivos</a></li>
+            </ul>
         </div>
     </div>
     <footer>
