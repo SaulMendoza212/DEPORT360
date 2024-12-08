@@ -90,6 +90,23 @@
             }
         }
 
+        /* Botón de Scroll al Inicio */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #003d7e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+        }
+        .scroll-to-top:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
@@ -140,5 +157,15 @@
             <a href="#" style="color: #ffd700;">YouTube</a>
         </p>
     </footer>
+
+    <!-- Botón de Scroll al Inicio -->
+    <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        ↑
+    </button>
+
+    <!-- Botón para Cambiar el Color de Fondo -->
+    <button id="changeColorButton">Cambiar Color de Fondo</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
