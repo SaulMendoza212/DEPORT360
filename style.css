@@ -30,11 +30,14 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+}
 
+/* Efecto hover para los botones */
 button:hover {
     background-color: #2980b9;
 }
 
+/* Estilo para el texto central con fondo semi-transparente */
 .texto-central {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
     color: white; /* Color del texto */
